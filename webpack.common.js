@@ -1,10 +1,11 @@
 const QuickPaperLoaderPlugin = require('quick-paper/loader-plug/index.js');
+const pkg = JSON.parse(require('fs').readFileSync('./package.json'));
 
 module.exports = {
     entry: ['./src/entry.js'],
     output: {
         path: __dirname,
-        filename: 'build/main.v1.js'
+        filename: 'build/main@v' + pkg.version + '.js'
     },
     module: {
         rules: [{
