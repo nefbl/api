@@ -1,0 +1,76 @@
+<template class='nav-view'>
+    <div class="menu">
+        <ul :active='pagename=="introduction"?"yes":"no"'>
+            <li>
+                <h3 @click='openPage("introduction","top","no")'>介绍</h3>
+                <ul>
+                    <li>
+                        <h4 @click='doScroll("xxx1")'>二级标题</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("xxx1-1")'>三级标题</h5>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul :active='pagename=="started"?"yes":"no"'>
+            <li>
+                <h3 @click='openPage("started","top","no")'>开始使用</h3>
+            </li>
+        </ul>
+        <ul :active='pagename=="understanding"?"yes":"no"'>
+            <li>
+                <h3 @click='openPage("understanding","top","no")'>理解 Nefbl</h3>
+            </li>
+        </ul>
+        <ul :active='pagename=="guides"?"yes":"no"'>
+            <li>
+                <h3 @click='openPage("guides","top","no")'>开发指南</h3>
+            </li>
+        </ul>
+    </div>
+    <div id='root-view' class='view'>
+        <div>
+            <component :is='page'></component>
+        </div>
+    </div>
+</template>
+<script>
+    import fixedScroll from '../../Service/fixedScroll.js';
+
+    let pages = {
+        introduction: () => import('./introduction.paper'),
+        started: () => import('./started.paper'),
+        understanding: () => import('./understanding.paper'),
+        guides: () => import('./guides.paper')
+    };
+
+    export default {
+        data() {
+            return {
+                page: null,
+                pagename: ""
+            };
+        },
+        mounted() {
+            let urlJson = this.urlFormat(window.location.href);
+            this.openPage(urlJson.router[1] in pages ? urlJson.router[1] : "introduction", urlJson.params.fixed || "top");
+        },
+        methods: {
+            openPage(pagename, fixedName, flag) {
+                pages[pagename]().then(data => {
+                    this.page = data.default;
+                    this.pagename = pagename;
+                    if (flag == 'no') window.location.href = "#/begin/" + pagename + "?fixed=" + fixedName;
+                    fixedScroll(fixedName);
+                });
+            },
+            doScroll(fixedName) {
+                window.location.href = "#/begin/" + this.pagename + "?fixed=" + fixedName;
+                fixedScroll(fixedName);
+            }
+        }
+    };
+</script>
