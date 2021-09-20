@@ -3,16 +3,6 @@
         <ul :active='pagename=="introduction"?"yes":"no"'>
             <li>
                 <h3 @click='openPage("introduction","top","no")'>介绍</h3>
-                <ul>
-                    <li>
-                        <h4 @click='doScroll("xxx1")'>二级标题</h4>
-                        <ul>
-                            <li>
-                                <h5 @click='doScroll("xxx1-1")'>三级标题</h5>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </li>
         </ul>
         <ul :active='pagename=="started"?"yes":"no"'>
@@ -23,6 +13,44 @@
         <ul :active='pagename=="understanding"?"yes":"no"'>
             <li>
                 <h3 @click='openPage("understanding","top","no")'>理解 Nefbl</h3>
+                <ul>
+                    <li>
+                        <h4 @click='doScroll("startup")'>启动流程</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("startup-platform")'>获取平台实例</h5>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("startup-main-module")'>启动主模块</h5>
+                                <ul>
+                                    <li>
+                                        <h6 @click='doScroll("startup-component")'>组件</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("startup-module")'>模块</h6>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("more")'>更多</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("more-directive")'>指令</h5>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("more-service")'>服务</h5>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("more-pipe")'>管道</h5>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("module")'>多模块开发</h4>
+                    </li>
+                </ul>
             </li>
         </ul>
         <ul :active='pagename=="guides"?"yes":"no"'>

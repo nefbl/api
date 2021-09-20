@@ -1,7 +1,7 @@
 <template>
     <header>
         <span>Nefbl | 新一代前端框架</span>
-        <span class="alpha">本项目处于开发阶段，计划在2022年3月结束前发布~</span>
+        <span class="alpha">本项目处于开发阶段，计划在2021年12月结束前发布~</span>
         <nav>
             <span @click='loadpage("begin","no")' :active='url=="begin"?"yes":"no"'>
                 开始

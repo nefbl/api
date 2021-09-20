@@ -2,19 +2,4 @@
     <header id='fixed-top'>
         介绍
     </header>
-    <h2 id='fixed-xxx1'>
-        二级标题
-    </h2>
-    <p>
-        ....................
-    </p>
-    <h3 id='fixed-xxx1-1'>
-        三级标题
-    </h3>
-    <p>
-        ....................
-    </p>
-    <pre q-code='html'>
-        ==============
-    </pre>
 </template>

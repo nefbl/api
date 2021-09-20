@@ -2,4 +2,34 @@
     <header id='fixed-top'>
         理解 Nefbl
     </header>
+    <h2 id='fixed-startup'>
+        启动流程
+    </h2>
+    <h3 id='fixed-startup-platform'>
+        获取平台实例
+    </h3>
+    <h3 id='fixed-startup-main-module'>
+        启动主模块
+    </h3>
+    <h4 id='fixed-startup-component'>
+        组件
+    </h4>
+    <h4 id='fixed-startup-module'>
+        模块
+    </h4>
+    <h2 id='fixed-more'>
+        更多
+    </h2>
+    <h3 id='fixed-more-directive'>
+        指令
+    </h3>
+    <h3 id='fixed-more-service'>
+        服务
+    </h3>
+    <h3 id='fixed-more-pipe'>
+        管道
+    </h3>
+    <h2 id='fixed-module'>
+        多模块开发
+    </h2>
 </template>

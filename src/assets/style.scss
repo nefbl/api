@@ -1,10 +1,3 @@
-html {
-    font-size: 100px;
-}
-
-body {
-    font-size: .16rem;
-}
 
 div.doc-view {
     &>header {
@@ -55,7 +48,8 @@ div.doc-view {
             // 标题
             h3,
             h4,
-            h5 {
+            h5,
+            h6 {
                 padding-left: 7px;
                 line-height: 30px;
             }
@@ -69,19 +63,17 @@ div.doc-view {
 
             // 二级和三级标题
             h4,
-            h5 {
+            h5,
+            h6 {
                 font-size: 14px;
                 cursor: pointer;
                 font-weight: 400;
             }
 
             &>ul {
-                &>li>ul {
-                    margin-left: 20px;
-                }
 
                 ul {
-                    margin-left: 10px;
+                    margin-left: 20px;
                 }
             }
 
