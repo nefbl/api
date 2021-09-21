@@ -1,0 +1,17 @@
+<template class='doc-view'>
+    <header id='fixed-top'>
+        入门
+    </header>
+    <h2 id='fixed-basic-begin'>
+        基本说明
+    </h2>
+    <h2 id='fixed-basic-environment'>
+        搭建开发环境
+    </h2>
+    <h2 id='fixed-basic-demo'>
+        例子项目
+    </h2>
+    <p>
+        我们将通过这个例子，把一些基本的概念和用法说明清楚。
+    </p>
+</template>

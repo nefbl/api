@@ -8,28 +8,94 @@
     <h3 id='fixed-startup-platform'>
         获取平台实例
     </h3>
+    <p>
+        由于不同浏览器存在差异，可是，这些差异在浏览器确定以后，就确定了，因此，在框架真正启动前，我们通过下面的方法获取一个"了解"当前浏览器的对象，就像这样：
+    </p>
+    <pre q-code>
+import { platform } from 'nefbl';
+let pf = platform(config);
+    </pre>
+    <p>
+        你可以传递一个config来包含你的一些原始意图。后续框架的所有浏览器相关操作，都会直接或间接的使用此对象实现。
+    </p>
     <h3 id='fixed-startup-main-module'>
         启动主模块
     </h3>
+    <p>
+        我们通过把项目按照一定的规律（比如业务规则和复用情况，划分不同的业务模块和通用的技术模块）划分成不同的模块，这样利于代码的管理。
+    </p>
+    <p>
+        模块直接可以互相依赖，不过，需要一个模块来作为项目启动入口，这就是主模块。
+    </p>
+    <pre q-code>
+import appModule from "./app.module";
+pf.bootstrap(appModule);
+    </pre>
+    <p>
+        通过刚刚获取的
+        <span class="important">对象pf</span>
+        上的方法启动主模块，然后通过模块之间的依赖，就启动了整个项目。
+    </p>
     <h4 id='fixed-startup-component'>
         组件
     </h4>
+    <p>
+        简单的理解就是标签，比如div、a、p等，通过自定义组件的方式，可以提供更强功能的标签。
+    </p>
+    <pre q-code>
+@Component({
+    selector: string,
+    template: string,
+    style: string
+})
+export default class {
+    // todo
+};
+    </pre>
+    <p>
+        如上所示，我们通过
+        <span class="important">装饰器</span>
+        来规定了当前组件的标签名、模板和样式，然后，你可以在"// todo"的位置编辑逻辑代码。
+    </p>
     <h4 id='fixed-startup-module'>
         模块
     </h4>
+    <p>
+        模块就是一个负责管理资源的对象，主模块也是模块。
+    </p>
+    <pre q-code>
+@Module({})
+export default class {
+    // todo
+};
+    </pre>
+    <p>
+        类似的，可以通过
+        <span class="important">装饰器</span>
+        来定义模块的一些基本行为，比如依赖关系等，更复杂的内容在"// todo"的位置编辑。
+    </p>
     <h2 id='fixed-more'>
         更多
     </h2>
+    <p>
+        模块和组件是一个项目必须的，除此之外，还有别的特殊功能的抽象。
+    </p>
     <h3 id='fixed-more-directive'>
         指令
     </h3>
+    <p>
+        和组件类似，指令对应着浏览器的属性，用于自定义具有特殊功能的标签属性。
+    </p>
     <h3 id='fixed-more-service'>
         服务
     </h3>
-    <h3 id='fixed-more-pipe'>
-        管道
-    </h3>
+    <p>
+        服务主要是提供一些纯粹的js逻辑代码，提高复用。
+    </p>
     <h2 id='fixed-module'>
         多模块开发
     </h2>
+    <p>
+        不同的模块用于不同的组件、指令、服务等，比如不同模块的服务无法直接互相调用，需要借助模块的依赖关系，这样的好处是，益于维护，特别是当项目特别庞大的时候。
+    </p>
 </template>

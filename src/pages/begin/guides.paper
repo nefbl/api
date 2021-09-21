@@ -2,4 +2,40 @@
     <header id='fixed-top'>
         开发指南
     </header>
+    <p>
+        至此，你已经体会并理解了nefbl的开发和设计思路了，非常感谢你对本项目的支持。
+    </p>
+    <h2 id='fixed-community'>
+        开发者社区
+    </h2>
+    <p>
+        我们所有的项目都托管在Github上的
+        <a href="https://github.com/nefbl" target="_blank" class='link'>nefbl开源组织</a>
+        上，你可以选择对应的项目参与进来，通过提
+        <span class="important">issue</span>
+        建议或
+        <span class="important">Pull Request</span>
+        的方式推送代码。
+    </p>
+    <h2 id='fixed-thanks'>
+        感谢
+    </h2>
+    <p>
+        本项目的基础算法和方法分别来自开源项目
+        <a href="https://github.com/hai2007/algorithm.js" target="_blank" class='link'>
+            @hai2007/algorithm
+        </a>
+        和
+        <a href="https://github.com/hai2007/tool.js" target="_blank" class='link'>
+            @hai2007/tool
+        </a>
+        的支持，这极大的提高了开发效率，让我们可以把更多的精力放到框架本身的构思和开发中。
+    </p>
+    <p>
+        同时，感谢
+        <a href="https://api.jquery.com/" target="_blank" class='link'>
+            jQuery.js
+        </a>
+        的精巧设计，感谢其为前端开发所做出的贡献，也感谢那个时代。
+    </p>
 </template>

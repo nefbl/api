@@ -1,0 +1,5 @@
+<template class='doc-view'>
+    <header id='fixed-top'>
+        基础
+    </header>
+</template>

@@ -1,8 +1,19 @@
 <template class='nav-view'>
     <div class="menu">
-        <ul :active='pagename=="xxx"?"yes":"no"'>
+        <ul :active='pagename=="basic"?"yes":"no"'>
             <li>
-                <h3 @click='openPage("xxx","top","no")'>XXX</h3>
+                <h3 @click='openPage("basic","top","no")'>入门</h3>
+                <ul>
+                    <li>
+                        <h4 @click='doScroll("basic-begin")'>基本说明</h4>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("basic-environment")'>搭建开发环境</h4>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("basic-demo")'>例子项目</h4>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -16,7 +27,7 @@
     import fixedScroll from '../../Service/fixedScroll.js';
 
     let pages = {
-        "xxx": () => import('./xxx.paper')
+        "basic": () => import('./basic.paper')
     };
 
     export default {
@@ -28,7 +39,7 @@
         },
         mounted() {
             let urlJson = this.urlFormat(window.location.href);
-            this.openPage(urlJson.router[1] in pages ? urlJson.router[1] : "xxx", urlJson.params.fixed || "top");
+            this.openPage(urlJson.router[1] in pages ? urlJson.router[1] : "basic", urlJson.params.fixed || "top");
         },
         methods: {
             openPage(pagename, fixedName, flag) {

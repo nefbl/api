@@ -16,6 +16,25 @@
         <ul :active='pagename=="started"?"yes":"no"'>
             <li>
                 <h3 @click='openPage("started","top","no")'>开始使用</h3>
+                <ul>
+                    <li>
+                        <h4 @click='doScroll("new")'>创建项目</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("cli")'>安装cli命令</h5>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("new-project")'>创建</h5>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("struct")'>目录结构</h4>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("diy")'>试一试</h4>
+                    </li>
+                </ul>
             </li>
         </ul>
         <ul :active='pagename=="understanding"?"yes":"no"'>
@@ -50,9 +69,6 @@
                             <li>
                                 <h5 @click='doScroll("more-service")'>服务</h5>
                             </li>
-                            <li>
-                                <h5 @click='doScroll("more-pipe")'>管道</h5>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -64,6 +80,14 @@
         <ul :active='pagename=="guides"?"yes":"no"'>
             <li>
                 <h3 @click='openPage("guides","top","no")'>开发指南</h3>
+                <ul>
+                    <li>
+                        <h4 @click='doScroll("community")'>开发者社区</h4>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("thanks")'>感谢</h4>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

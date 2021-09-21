@@ -2,4 +2,51 @@
     <header id='fixed-top'>
         开始使用
     </header>
+    <p>
+        在这里，我们只是简单的说明一下，主要的目的是让你快速体验，更详细的内容，请移步到
+        <a href="#/course" target="_blank" class='link'>教程</a>
+        一节。
+    </p>
+    <h2 id='fixed-new'>
+        创建项目
+    </h2>
+    <p>
+        在正式的学习中，我们推荐你试试手动搭建整个项目，这样有助于你的理解，不过，初步接触，使用脚手架命令可能是更好的选择。
+    </p>
+    <h3 id='fixed-cli'>
+        安装cli命令
+    </h3>
+    <p>
+        打开命令行，执行下面的命令安装脚手架命令：
+    </p>
+    <pre q-code>
+        npm install -g @nefbl/cli
+    </pre>
+    <p>
+        安装好了以后，执行下面的命令，可以查看命令行版本：
+    </p>
+    <pre q-code>
+        nefbl -v
+    </pre>
+    <p>
+        如果打印出版本号，就说明安装成功了。
+    </p>
+    <h3 id='fixed-new-project'>
+        创建
+    </h3>
+    <p>
+
+    </p>
+    <h2 id='fixed-struct'>
+        目录结构
+    </h2>
+    <p>
+
+    </p>
+    <h2 id='fixed-diy'>
+        试一试
+    </h2>
+    <p>
+
+    </p>
 </template>
