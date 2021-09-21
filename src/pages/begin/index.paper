@@ -3,6 +3,14 @@
         <ul :active='pagename=="introduction"?"yes":"no"'>
             <li>
                 <h3 @click='openPage("introduction","top","no")'>介绍</h3>
+                <ul>
+                    <li>
+                        <h4 @click='doScroll("dev-background")'>开发背景</h4>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("issue")'>反馈</h4>
+                    </li>
+                </ul>
             </li>
         </ul>
         <ul :active='pagename=="started"?"yes":"no"'>

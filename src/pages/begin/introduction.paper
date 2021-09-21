@@ -2,4 +2,56 @@
     <header id='fixed-top'>
         介绍
     </header>
+    <h2 id='fixed-dev-background'>
+        开发背景
+    </h2>
+    <p>
+        前端从一个单纯的内容页面，到包含更丰富的UI页面，然后到可交互界面；从后端渲染到纯前端开发；从"蛮荒时代"到jQuery统治时期，再到前端框架兴起。
+    </p>
+    <p>
+        当前处于多前端"混战"的时期，前端朝着更规范、更工程化的方向发展似乎不可避免了。可是，最终的前端框架到底应该是什么样子的？谁知道滴。
+    </p>
+    <p class="warn">
+        越是这样的时期，基础的技术越是比新技术更重要。
+    </p>
+    <p>
+        我们开发了一个简单的框架
+        <a href="https://hai2007.gitee.io/quick-paper/" target="_blank" class='link'>Quick Paper</a>
+        和一个图形框架
+        <a href="https://hai2007.gitee.io/clunch/" target="_blank" class='link'>clunch.js</a>
+        来尝试思考上面的问题。
+    </p>
+    <p>
+        然而，随着一些内容的理解，原来的项目已经无法提供思考的土壤。因此，我们决定基于已有的思考，通过开发一个真正的前端框架来进行更深入的理解。
+    </p>
+    <p>
+        同时，我们期望此框架可以在未来用于实际项目的开发，作为一个开源项目持续支持，这便是此框架开发的背景和目的。
+    </p>
+    <h2 id='fixed-issue'>
+        反馈
+    </h2>
+    <p class='important'>
+        你也可以和我们一起做贡献！
+    </p>
+    <p>
+        虽然本项目主要由
+        <a href="https://hai2007.gitee.io/sweethome/" target="_blank" class='link'>你好2007</a>
+        开发和维护，但是，我们欢迎所有的声音（包括好的建议和有益的批评）。
+    </p>
+    <p>
+        你可以通过
+        <a href="https://github.com/nefbl/nefbl/issues" target="_blank" class='link'>提issue</a>
+        来给我们留言或到Github上的仓库中创建
+        <a href="https://github.com/nefbl/nefbl/pulls" target="_blank" class='link'>Pull Requests</a>
+        来为本框架做出贡献。
+    </p>
+    <p>
+        同时，非常欢迎你加入我们，参与项目的设计、开发和维护，成为长期稳定的贡献者，和我们保持密切的联系。最终，我们会带着初心矢志不渝的坚持维护，并永远保持自由、开源、讨论和进步。
+    </p>
 </template>
+<style>
+    p.important {
+        font-size: 18px;
+        text-indent: 0;
+    }
+</style>

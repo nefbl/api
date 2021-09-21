@@ -15,7 +15,24 @@
             <span>
                 <a href="https://github.com/nefbl/nefbl" target="_blank">GitHub</a>
             </span>
-            <ui-search></ui-search>
+            <span class='select'>
+                <i>
+                    扩展资源
+                </i>
+                <div>
+                    <h2>
+                        工具
+                    </h2>
+                    <a href="https://github.com/nefbl/cli" target="_blank">命令行辅助工具 cli</a>
+                    <h2>
+                        插件
+                    </h2>
+                    <a href="https://nefbl.github.io/router/" target="_blank">路由 Router</a>
+                </div>
+            </span>
+            <span class='search'>
+                <ui-search></ui-search>
+            </span>
         </nav>
     </header>
     <div class='content'>
@@ -89,9 +106,13 @@
 
             &>nav {
                 position: absolute;
-                right: 10px;
                 top: 0;
+                right: 0;
                 z-index: 2;
+                background-color: white;
+                padding-left: 20px;
+                padding-right: 10px;
+                height: 55px;
 
                 &>span {
                     margin-right: 10px;
@@ -103,7 +124,8 @@
 
                     &>a {
                         position: relative;
-                        margin-right: 30px;
+                        margin-right: 20px;
+                        color: rgb(0, 0, 0);
 
                         &::after {
                             position: absolute;
@@ -126,6 +148,66 @@
 
                     &:hover {
                         font-weight: 800;
+                    }
+
+                    &.search {
+                        margin-left: 10px;
+                    }
+
+                    &.select {
+                        &>i {
+                            &::after {
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-top: -1px;
+                                margin-left: 6px;
+                                margin-right: -14px;
+                                width: 0;
+                                height: 0;
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;
+                                border-top: 5px solid #4f5959;
+                                content: " ";
+                            }
+
+                            font-style:normal;
+                        }
+
+                        &:hover {
+                            &>div {
+                                display: block;
+                            }
+                        }
+
+                        position: relative;
+
+                        &>div {
+                            display: none;
+                            position: absolute;
+                            box-shadow: 1px 1px 6px 0px #858889;
+                            padding: 10px;
+                            top: 47px;
+                            right: 0px;
+                            background-color: white;
+                            line-height: 2em;
+                            cursor: default;
+
+                            &>a {
+                                display: block;
+                                color: black;
+                                font-weight: 200;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+
+                            }
+
+                            &>h2 {
+                                font-size: 14px;
+                                margin-top: 10px;
+                            }
+                        }
                     }
                 }
             }

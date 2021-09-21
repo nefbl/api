@@ -1,4 +1,3 @@
-
 div.doc-view {
     &>header {
         font-size: 26px;
@@ -8,6 +7,20 @@ div.doc-view {
 
     &>h2 {
         font-size: 18px;
+    }
+
+    &>p {
+        &.warn {
+            color: rgb(131, 131, 5);
+            background-image: url('../assets/warn.png');
+            background-size: auto 20px;
+            background-position: 10px center;
+            text-indent: 0;
+            padding-left: 30px;
+            background-repeat: no-repeat;
+            font-size: 12px;
+            font-weight: 200;
+        }
     }
 }
 
