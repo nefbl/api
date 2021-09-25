@@ -83,12 +83,24 @@ export default class {
     <h3 id='fixed-more-directive'>
         指令
     </h3>
+    <pre q-code>
+@Directive({})
+export default class {
+    // todo
+};
+    </pre>
     <p>
         和组件类似，指令对应着浏览器的属性，用于自定义具有特殊功能的标签属性。
     </p>
     <h3 id='fixed-more-service'>
         服务
     </h3>
+    <pre q-code>
+@Service({})
+export default class {
+    // todo
+};
+    </pre>
     <p>
         服务主要是提供一些纯粹的js逻辑代码，提高复用。
     </p>

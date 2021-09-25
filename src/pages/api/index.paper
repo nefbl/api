@@ -5,16 +5,44 @@
                 <h3 @click='openPage("basic","top","no")'>基础</h3>
                 <ul>
                     <li>
-                        <h4>对象</h4>
+                        <h4 @click='doScroll("platform")'>启动</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("platform-options")'>options</h5>
+                                <ul>
+                                    <li>
+                                        <h6 @click='doScroll("platform-options-el")'>el</h6>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("platform-return")'>实例</h5>
+                                <ul>
+                                    <li>
+                                        <h6 @click='doScroll("platform-return-bootstrap")'>bootstrap</h6>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <h4>组件</h4>
-                    </li>
-                    <li>
-                        <h4>指令</h4>
-                    </li>
-                    <li>
-                        <h4>服务</h4>
+                        <h4 @click='doScroll("inner")'>内置</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("component")'>组件</h5>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("directive")'>指令</h5>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("service")'>服务</h5>
+                                <ul>
+                                    <li>
+                                        <h5 @click='doScroll("$compile")'>$compile</h5>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -24,28 +52,40 @@
                 <h3 @click='openPage("enhance","top","no")'>高级</h3>
                 <ul>
                     <li>
-                        <h4>自定义</h4>
+                        <h4 @click='doScroll("define")'>自定义</h4>
                         <ul>
                             <li>
-                                <h5>组件</h5>
+                                <h5 @click='doScroll("component")'>组件</h5>
                             </li>
                             <li>
-                                <h5>指令</h5>
+                                <h5 @click='doScroll("directive")'>指令</h5>
                             </li>
                             <li>
-                                <h5>服务</h5>
+                                <h5 @click='doScroll("service")'>服务</h5>
                             </li>
                         </ul>
                     </li>
-                </ul>
-            </li>
-        </ul>
-        <ul :active='pagename=="module"?"yes":"no"'>
-            <li>
-                <h3 @click='openPage("module","top","no")'>进阶</h3>
-                <ul>
                     <li>
-                        <h4>多模块开发</h4>
+                        <h4 @click='doScroll("module")'>模块</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("module-options")'>options</h5>
+                                <ul>
+                                    <li>
+                                        <h6 @click='doScroll("module-options-bootstrap")'>bootstrap</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("module-options-declarations")'>declarations</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("module-options-imports")'>imports</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("module-options-exports")'>exports</h6>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -62,8 +102,7 @@
 
     let pages = {
         "basic": () => import('./basic.paper'),
-        "enhance": () => import('./enhance.paper'),
-        "module": () => import('./module.paper')
+        "enhance": () => import('./enhance.paper')
     };
 
     export default {

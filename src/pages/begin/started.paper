@@ -34,19 +34,23 @@
     <h3 id='fixed-new-project'>
         创建
     </h3>
+    <pre q-code>
+        nefbl create <projectName>
+    </pre>
     <p>
-
+        <span class="important">&lt;projectName&gt;</span>
+        表示需要创建的项目名称。
     </p>
     <h2 id='fixed-struct'>
         目录结构
     </h2>
     <p>
-
+        【待补充】
     </p>
     <h2 id='fixed-diy'>
         试一试
     </h2>
     <p>
-
+        【待补充】
     </p>
 </template>
