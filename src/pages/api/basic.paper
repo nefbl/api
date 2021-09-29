@@ -69,21 +69,4 @@ pf.bootstrap(appModule);
     <p>
         【待补充】
     </p>
-    <h3 id='fixed-service'>
-        服务
-    </h3>
-    <h4 id='fixed-$compile'>
-        $Compile
-    </h4>
-    <pre q-code>
-import {$Compile} from 'nefbl';
-export default class{
-    constructor(compile: $Compile) {
-        // todo
-    }
-}
-    </pre>
-    <p>
-        【待补充】
-    </p>
 </template>

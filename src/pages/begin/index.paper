@@ -66,9 +66,6 @@
                             <li>
                                 <h5 @click='doScroll("more-directive")'>指令</h5>
                             </li>
-                            <li>
-                                <h5 @click='doScroll("more-service")'>服务</h5>
-                            </li>
                         </ul>
                     </li>
                     <li>
