@@ -26,6 +26,12 @@
     <p>
         必输，值需要是一个结点对象，表示此框架后续需要管理的区域。
     </p>
+    <h4 id='fixed-platform-options-styles'>
+        styles
+    </h4>
+    <p>
+        一个数组，数组的内容应该是css字符串，用以设置全局css。
+    </p>
     <h3 id='fixed-platform-return'>
         实例
     </h3>

@@ -13,6 +13,9 @@
                                     <li>
                                         <h6 @click='doScroll("platform-options-el")'>el</h6>
                                     </li>
+                                    <li>
+                                        <h6 @click='doScroll("platform-options-styles")'>styles</h6>
+                                    </li>
                                 </ul>
                             </li>
                             <li>

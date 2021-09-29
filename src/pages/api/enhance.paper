@@ -15,7 +15,7 @@
 @Component({
     selector: string,
     template: string,
-    style: string
+    styles: Array<string>
 })
 export default class {
     // todo
@@ -26,7 +26,7 @@ export default class {
     </h3>
     <pre q-code>
 @Directive({
-
+    selector: string
 })
 export default class {
     // todo
@@ -71,13 +71,13 @@ export default class {
         declarations
     </h4>
     <p>
-        值应该是一个数组，用于声明本模块具有的组件，指令，服务。
+        值应该是一个数组，用于声明本模块具有的组件、指令、服务。
     </p>
     <h4 id='fixed-module-options-imports'>
         imports
     </h4>
     <p>
-        值应该是一个数组，在这里引入别的模块，引入就意味着，本模块具有引入模块的组件，指令和服务（需要在exports中登记）。
+        值应该是一个数组，在这里引入别的模块，引入就意味着，本模块具有引入模块的组件、指令和服务（需要在exports中登记）。
     </p>
     <h4 id='fixed-module-options-exports'>
         exports
