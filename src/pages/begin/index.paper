@@ -28,12 +28,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <h4 @click='doScroll("struct")'>目录结构</h4>
-                    </li>
-                    <li>
-                        <h4 @click='doScroll("diy")'>试一试</h4>
-                    </li>
                 </ul>
             </li>
         </ul>

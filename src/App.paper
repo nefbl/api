@@ -1,16 +1,12 @@
 <template>
     <header>
         <span>Nefbl | 新一代前端框架</span>
-        <span class="alpha">本项目目前处于开发设计阶段，何时发布看缘分哦~</span>
         <nav>
             <span @click='loadpage("begin","no")' :active='url=="begin"?"yes":"no"'>
                 开始
             </span>
             <span @click='loadpage("api","no")' :active='url=="api"?"yes":"no"'>
                 文档
-            </span>
-            <span @click='loadpage("course","no")' :active='url=="course"?"yes":"no"'>
-                教程
             </span>
             <span>
                 <a href="https://github.com/nefbl/nefbl" target="_blank">GitHub</a>
@@ -45,8 +41,7 @@
 
     let pages = {
         begin: () => import('./pages/begin/index.paper'),
-        api: () => import('./pages/api/index.paper'),
-        course: () => import('./pages/course/index.paper')
+        api: () => import('./pages/api/index.paper')
     };
 
     export default {
@@ -94,14 +89,6 @@
                 font-family: cursive;
                 font-size: 20px;
                 font-weight: 200;
-
-                &.alpha {
-                    font-size: 12px;
-                    background-color: #ff5722;
-                    color: white;
-                    padding: 5px 10px;
-                    margin-left: 20px;
-                }
             }
 
             &>nav {

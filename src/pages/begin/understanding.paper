@@ -46,7 +46,7 @@ pf.bootstrap(appModule);
 @Component({
     selector: string,
     template: string,
-    style: string
+    styles: Array<string>
 })
 export default class {
     // todo

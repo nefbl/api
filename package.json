@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "nefbl查询文档",
   "scripts": {
     "start": "npm install && npm run dev",

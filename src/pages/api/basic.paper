@@ -48,25 +48,4 @@
 import appModule from "./app.module";
 pf.bootstrap(appModule);
     </pre>
-    <h2 id='fixed-inner'>
-        内置
-    </h2>
-    <p>
-        简单的说，组件就是标签、指令是属性，而服务就是方法。
-    </p>
-    <p>
-        项目正常启动以后，就可以直接使用下面的内置组件、指令和服务了，而不需要引入额外的内容。
-    </p>
-    <h3 id='fixed-component'>
-        组件
-    </h3>
-    <p>
-        【待补充】
-    </p>
-    <h3 id='fixed-directive'>
-        指令
-    </h3>
-    <p>
-        【待补充】
-    </p>
 </template>
