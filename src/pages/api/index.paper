@@ -28,46 +28,6 @@
                             </li>
                         </ul>
                     </li>
-                </ul>
-            </li>
-        </ul>
-        <ul :active='pagename=="enhance"?"yes":"no"'>
-            <li>
-                <h3 @click='openPage("enhance","top","no")'>高级</h3>
-                <ul>
-                    <li>
-                        <h4 @click='doScroll("define")'>自定义</h4>
-                        <ul>
-                            <li>
-                                <h5 @click='doScroll("component")'>组件</h5>
-                                <ul>
-                                    <li>
-                                        <h6 @click='doScroll("component-setup")'>$setup</h6>
-                                    </li>
-                                    <li>
-                                        <h6 @click='doScroll("component-mounted")'>$mounted</h6>
-                                    </li>
-                                    <li>
-                                        <h6 @click='doScroll("component-beforeUpdate")'>$beforeUpdate</h6>
-                                    </li>
-                                    <li>
-                                        <h6 @click='doScroll("component-updated")'>$updated</h6>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h5 @click='doScroll("directive")'>指令</h5>
-                                <ul>
-                                    <li>
-                                        <h6 @click='doScroll("directive-inserted")'>$inserted</h6>
-                                    </li>
-                                    <li>
-                                        <h6 @click='doScroll("directive-update")'>$update</h6>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
                     <li>
                         <h4 @click='doScroll("module")'>模块</h4>
                         <ul>
@@ -90,6 +50,44 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <h4 @click='doScroll("component")'>组件</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("component-setup")'>$setup</h5>
+                            </li>
+                            <li>
+                                <h5 @click='doScroll("component-hook")'>钩子</h5>
+                                <ul>
+                                    <li>
+                                        <h6 @click='doScroll("component-mounted")'>$mounted</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("component-beforeUpdate")'>$beforeUpdate</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("component-updated")'>$updated</h6>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4 @click='doScroll("directive")'>指令</h4>
+                        <ul>
+                            <li>
+                                <h5 @click='doScroll("directive-hook")'>钩子</h5>
+                                <ul>
+                                    <li>
+                                        <h6 @click='doScroll("directive-inserted")'>$inserted</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("directive-update")'>$update</h6>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -104,8 +102,7 @@
     import fixedScroll from '../../Service/fixedScroll.js';
 
     let pages = {
-        "basic": () => import('./basic.paper'),
-        "enhance": () => import('./enhance.paper')
+        "basic": () => import('./basic.paper')
     };
 
     export default {
