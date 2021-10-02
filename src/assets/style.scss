@@ -22,6 +22,10 @@ div.doc-view {
             font-weight: 200;
         }
     }
+
+    &>h5 {
+        color: red;
+    }
 }
 
 .link {
