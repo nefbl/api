@@ -20,10 +20,6 @@
                         工具
                     </h2>
                     <a href="https://github.com/nefbl/cli" target="_blank">命令行辅助工具 cli</a>
-                    <h2>
-                        插件
-                    </h2>
-                    <a href="https://nefbl.github.io/router/" target="_blank">路由 Router</a>
                 </div>
             </span>
             <span class='search'>
