@@ -240,6 +240,10 @@ function(el, binding){
             <span class="important">value</span>
             ：属性值在当前组件对象上作为表达式解析后的值。
         </li>
+        <li>
+            <span class="important">target</span>
+            ：当前组件对象实例。
+        </li>
     </ul>
     <h3 id='fixed-more'>
         更多
