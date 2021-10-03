@@ -264,7 +264,7 @@ function(el, binding){
         存在于组件和指令对象上，表示当前所在的模块实例。
     </p>
     <h4 id='fixed-more-method'>
-        核心方法
+        导出方法
     </h4>
     <p>
         也就是可以通过nefbl直接导入的方法，语法如下（比如XXX方法）：
@@ -283,5 +283,14 @@ function(el, binding){
     </pre>
     <p>
         el和module分别表示挂载点DOM和当前模块实例，而Component表示组件（非实例对象）。
+    </p>
+    <h5 id='fixed-more-method-evalExpress'>
+        evalExpress
+    </h5>
+    <pre q-code>
+        let value = evalExpress(target, express, scope = {});
+    </pre>
+    <p>
+        在指定对象target上求解表达式express的值，一个可选参数scope表示，如果scope有值，会拦截target。
     </p>
 </template>
