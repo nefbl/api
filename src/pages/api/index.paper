@@ -108,6 +108,12 @@
                                     <li>
                                         <h6 @click='doScroll("more-method-evalExpress")'>evalExpress</h6>
                                     </li>
+                                    <li>
+                                        <h6 @click='doScroll("more-method-getValue")'>getValue</h6>
+                                    </li>
+                                    <li>
+                                        <h6 @click='doScroll("more-method-setValue")'>setValue</h6>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
