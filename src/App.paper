@@ -19,7 +19,12 @@
                     <h2>
                         工具
                     </h2>
-                    <a href="https://github.com/nefbl/cli" target="_blank">命令行辅助工具 cli</a>
+                    <a href="https://github.com/nefbl/cli" target="_blank">@nefbl/cli</a>
+                    <a href="https://github.com/nefbl/pack" target="_blank">@nefbl/pack</a>
+                    <h2>
+                        组件库
+                    </h2>
+                    <a href="https://hai2007.github.io/SproutUI/#/nefbl" target="_blank">Sprout UI</a>
                 </div>
             </span>
             <span class='search'>
