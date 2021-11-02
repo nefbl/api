@@ -245,70 +245,122 @@ function(el, binding){
             ：当前组件对象实例。
         </li>
     </ul>
-    <h3 id='fixed-more'>
-        更多
-    </h3>
-    <p>
-        大部分内容我们都按照类型进行了穿插说明，对于一些上面没有说明的，在这里进行统一补充。
-    </p>
-    <h4 id='fixed-more-attribute'>
-        对象属性
-    </h4>
-    <p>
-        就是实例化的时候，当前对象上自动具有的属性值。
-    </p>
-    <h5 id='fixed-more-attribute-_module'>
-        _module
-    </h5>
-    <p>
-        存在于组件和指令对象上，表示当前所在的模块实例。
-    </p>
-    <h4 id='fixed-more-method'>
-        导出方法
-    </h4>
-    <p>
-        也就是可以通过nefbl直接导入的方法，语法如下（比如XXX方法）：
-    </p>
-    <pre q-code>
-        import { XXX } from 'nefbl';
-    </pre>
-    <h5 id='fixed-more-method-mountComponent'>
-        mountComponent
-    </h5>
-    <p>
-        此方法用于在指定的结点主动挂载组件：
-    </p>
-    <pre q-code>
-        mountComponent(el, Component, module);
-    </pre>
-    <p>
-        el和module分别表示挂载点DOM和当前模块实例，而Component表示组件（非实例对象）。
-    </p>
-    <h5 id='fixed-more-method-evalExpress'>
-        evalExpress
-    </h5>
-    <pre q-code>
-        let value = evalExpress(target, express, scope = {});
-    </pre>
-    <p>
-        在指定对象target上求解表达式express的值。一个可选参数scope表示，如果scope有值，会拦截target。
-    </p>
-    <h5 id='fixed-more-method-getValue'>
-        getValue
-    </h5>
-    <pre q-code>
-        let value=getValue(target, express, scope = {});
-    </pre>
-    <p>
-        获取对象上字符串表达式对应的值。一个可选参数scope表示，如果scope有值，会拦截target。
-    </p>
-    <h5 id='fixed-more-method-setValue'>
-        setValue
-    </h5>
-    <pre q-code>
-        let newTarget=setValue(target, express, value, scope = {});
-    </pre>
-    <p>
-        设置对象上字符串表达式对应的值，虽然会返回新的值，不过旧的值也同步修改了。一个可选参数scope表示，如果scope有值，会拦截target。
-    </p>
+    <div class='doc-view more-view'>
+        <h1 id='fixed-more' @click='doScroll("more")'>
+            更多
+        </h1>
+        <p>
+            在这里，我们对基础部分中一些不常用的进行补充，这些内容可能会对你更深入的使用本框架或者进行更灵活的设计有所帮助。
+        </p>
+        <h2 id='fixed-more-attribute' @click='doScroll("more-attribute")'>
+            对象属性
+        </h2>
+        <p>
+            就是实例化的时候，当前对象上自动具有的属性值。
+        </p>
+        <h3 id='fixed-more-attribute-_module' @click='doScroll("more-attribute-_module")'>
+            _module
+        </h3>
+        <p>
+            存在于组件和指令对象上，表示当前所在的模块实例。
+        </p>
+        <h2 id='fixed-more-method' @click='doScroll("more-method")'>
+            导出方法
+        </h2>
+        <p>
+            也就是可以通过nefbl直接导入的方法，语法如下（比如XXX方法）：
+        </p>
+        <pre q-code>
+            import { XXX } from 'nefbl';
+        </pre>
+        <h3 id='fixed-more-method-mountComponent' @click='doScroll("more-method-mountComponent")'>
+            mountComponent
+        </h3>
+        <p>
+            此方法用于在指定的结点主动挂载组件：
+        </p>
+        <pre q-code>
+            mountComponent(el, Component, module);
+        </pre>
+        <p>
+            el和module分别表示挂载点DOM和当前模块实例，而Component表示组件（非实例对象）。
+        </p>
+        <h3 id='fixed-more-method-evalExpress' @click='doScroll("more-method-evalExpress")'>
+            evalExpress
+        </h3>
+        <pre q-code>
+            let value = evalExpress(target, express, scope = {});
+        </pre>
+        <p>
+            在指定对象target上求解表达式express的值。一个可选参数scope表示，如果scope有值，会拦截target。
+        </p>
+        <h3 id='fixed-more-method-getValue' @click='doScroll("more-method-getValue")'>
+            getValue
+        </h3>
+        <pre q-code>
+            let value=getValue(target, express, scope = {});
+        </pre>
+        <p>
+            获取对象上字符串表达式对应的值。一个可选参数scope表示，如果scope有值，会拦截target。
+        </p>
+        <h3 id='fixed-more-method-setValue' @click='doScroll("more-method-setValue")'>
+            setValue
+        </h3>
+        <pre q-code>
+            let newTarget=setValue(target, express, value, scope = {});
+        </pre>
+        <p>
+            设置对象上字符串表达式对应的值，虽然会返回新的值，不过旧的值也同步修改了。一个可选参数scope表示，如果scope有值，会拦截target。
+        </p>
+    </div>
 </template>
+<script>
+    import fixedScroll from '../../Service/fixedScroll.js';
+
+    export default {
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = "#/api/basic?fixed=" + fixedName;
+                fixedScroll(fixedName);
+            }
+        }
+    };
+</script>
+<style>
+    .more-view {
+        background-color: #efebea;
+        margin: 40px 0;
+        padding: 50px;
+
+        &::before {
+            background-image: url(../../assets/paper.png);
+            transform: rotate(96deg);
+            background-size: auto auto;
+            width: 200px;
+            height: 250px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            content: " ";
+            float: right;
+            margin-top: -44px;
+        }
+
+        pre {
+            background-color: #fefefe !important;
+        }
+
+        h1,
+        h2,
+        h3 {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        h1 {
+            padding: 30px 0;
+        }
+    }
+</style>

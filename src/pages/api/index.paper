@@ -88,36 +88,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <h4 @click='doScroll("more")'>更多</h4>
-                        <ul>
-                            <li>
-                                <h5 @click='doScroll("more-attribute")'>对象属性</h5>
-                                <ul>
-                                    <li>
-                                        <h6 @click='doScroll("more-attribute-_module")'>_module</h6>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h5 @click='doScroll("more-method")'>导出方法</h5>
-                                <ul>
-                                    <li>
-                                        <h6 @click='doScroll("more-method-mountComponent")'>mountComponent</h6>
-                                    </li>
-                                    <li>
-                                        <h6 @click='doScroll("more-method-evalExpress")'>evalExpress</h6>
-                                    </li>
-                                    <li>
-                                        <h6 @click='doScroll("more-method-getValue")'>getValue</h6>
-                                    </li>
-                                    <li>
-                                        <h6 @click='doScroll("more-method-setValue")'>setValue</h6>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </li>
         </ul>
@@ -162,3 +132,31 @@
         }
     };
 </script>
+<style>
+    .nav-view {
+        &>.menu {
+
+            // 标题
+            h3,
+            h4,
+            h5,
+            h6 {
+                padding-left: 7px;
+                line-height: 26px;
+            }
+
+            // 一级标题
+            h3 {
+                font-size: 15px;
+                margin-top: 10px;
+            }
+
+            // 二级和三级标题
+            h4,
+            h5,
+            h6 {
+                font-size: 13px;
+            }
+        }
+    }
+</style>
