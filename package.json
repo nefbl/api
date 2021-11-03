@@ -1,6 +1,6 @@
 {
   "name": "api",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "nefbl查询文档",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -11,6 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/nefbl/api.git"
   },
+  "author": "你好2007",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nefbl/api/issues"
   },
