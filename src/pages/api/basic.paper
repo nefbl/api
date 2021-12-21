@@ -333,7 +333,7 @@ function(el, binding){
         padding: 50px;
 
         &::before {
-            background-image: url(../../assets/paper.png);
+            background-image: url(./image/paper.png);
             transform: rotate(96deg);
             background-size: auto auto;
             width: 200px;

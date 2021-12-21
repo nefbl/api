@@ -12,7 +12,7 @@ div.doc-view {
     &>p {
         &.warn {
             color: rgb(131, 131, 5);
-            background-image: url('../assets/warn.png');
+            background-image: url('./image/warn.png');
             background-size: auto 20px;
             background-position: 10px center;
             text-indent: 0;
